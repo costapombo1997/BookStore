@@ -99,22 +99,9 @@
                   layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
 
-    CGFloat height = 300.0;
-
-    if ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait) {
-        CGFloat columns = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? 3.0 : 2.0;
-
-        CGFloat width = CGRectGetWidth(self.view.frame) / columns;
-
-        return CGSizeMake(width, height);
-    }
-    else { // landscape
-        CGFloat columns = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? 4.0 : 3.0;
-
-        CGFloat width = CGRectGetWidth(self.view.frame) / columns;
-
-        return CGSizeMake(width, height);
-    }
+   CGFloat height = 300.0;
+   CGFloat width = (collectionView.bounds.size.width/3) -8;
+   return CGSizeMake(width, height);
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{

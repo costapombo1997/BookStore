@@ -22,8 +22,14 @@
     if(!_viewModel ){
          _viewModel = [BookViewModel new];
      }
+
+    
     self.bookTitleLabel.text = _viewModel.book.name;
     self.bookCoverImageView.image = _viewModel.book.coverImage;
+    
+    // make sure i
+    self.bookTitleLabel.numberOfLines = 0;
+    [self.bookTitleLabel sizeToFit];
     
     [_viewModel fetchBookByBookId:_viewModel.book.bookId sucessHandler:^(NSDictionary *serverResponsedata){
         [self update];
@@ -37,6 +43,17 @@
     self.bookTitleLabel.text = _viewModel.book.name;
     self.bookDescriptionLabel.text = _viewModel.book.description ? _viewModel.book.description :  @"*no description provided*";
     self.bookPublishedLabel.text = _viewModel.book.publishedDate;
+    
+    
+    if(_viewModel.book.buyLink){
+        [self.buyButton setTitle:@"Buy" forState:UIControlStateNormal];
+        [self.buyButton setEnabled:YES];
+    }else{
+        [self.buyButton setTitle:@"Not available" forState:UIControlStateNormal];
+        [self.buyButton setEnabled:NO];
+    }
+    
+    
     
     if(_viewModel.book.coverImage){
         self.bookCoverImageView.image = _viewModel.book.coverImage;
@@ -79,15 +96,5 @@
     }
     _viewModel.book = book;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
