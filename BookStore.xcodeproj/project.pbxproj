@@ -1,0 +1,565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A2AEC2930AD42EA3E374A59 /* Pods_BookStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B192C7D6CA6F6A82F58F7A8 /* Pods_BookStore.framework */; };
+		EF313617243E2402001AD16C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF313616243E2402001AD16C /* AppDelegate.m */; };
+		EF31361A243E2402001AD16C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF313619243E2402001AD16C /* SceneDelegate.m */; };
+		EF31361D243E2402001AD16C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF31361C243E2402001AD16C /* ViewController.m */; };
+		EF313620243E2402001AD16C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF31361E243E2402001AD16C /* Main.storyboard */; };
+		EF313623243E2402001AD16C /* BookStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF313621243E2402001AD16C /* BookStore.xcdatamodeld */; };
+		EF313625243E2407001AD16C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF313624243E2407001AD16C /* Assets.xcassets */; };
+		EF313628243E2407001AD16C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF313626243E2407001AD16C /* LaunchScreen.storyboard */; };
+		EF31362B243E2407001AD16C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF31362A243E2407001AD16C /* main.m */; };
+		EF9A8C6F243E25DB009BD243 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9A8C6E243E25DB009BD243 /* Book.m */; };
+		EF9A8C77243E2B9C009BD243 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9A8C76243E2B9C009BD243 /* MainViewController.m */; };
+		EF9A8C7E243E2EB3009BD243 /* BooksRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9A8C7D243E2EB3009BD243 /* BooksRepo.m */; };
+		EF9A8C81243E2EF6009BD243 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9A8C80243E2EF6009BD243 /* SearchViewController.m */; };
+		EF9A8C85243E37E0009BD243 /* BookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9A8C84243E37E0009BD243 /* BookCell.xib */; };
+		EF9A8C88243E3824009BD243 /* BookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9A8C87243E3824009BD243 /* BookTableViewCell.m */; };
+		EF9A8C8B243E38AE009BD243 /* SearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9A8C8A243E38AE009BD243 /* SearchViewModel.m */; };
+		EF9A8C8E243E567C009BD243 /* BookViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9A8C8D243E567B009BD243 /* BookViewModel.m */; };
+		EF9A8C94243E592D009BD243 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9A8C93243E592D009BD243 /* BookViewController.m */; };
+		EF9A8C97243E6694009BD243 /* BookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9A8C96243E6694009BD243 /* BookCollectionViewCell.xib */; };
+		EF9A8C9A243E67C0009BD243 /* BookCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9A8C99243E67C0009BD243 /* BookCollectionViewCell.m */; };
+		EF9A8C9D243F2EC7009BD243 /* MainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9A8C9C243F2EC7009BD243 /* MainViewModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0B192C7D6CA6F6A82F58F7A8 /* Pods_BookStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AAAA1E924ECA36F5CEDBF03 /* Pods-BookStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookStore.release.xcconfig"; path = "Target Support Files/Pods-BookStore/Pods-BookStore.release.xcconfig"; sourceTree = "<group>"; };
+		B423592B9C3A9262C3572A89 /* Pods-BookStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookStore.debug.xcconfig"; path = "Target Support Files/Pods-BookStore/Pods-BookStore.debug.xcconfig"; sourceTree = "<group>"; };
+		EF313612243E2402001AD16C /* BookStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF313615243E2402001AD16C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EF313616243E2402001AD16C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EF313618243E2402001AD16C /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		EF313619243E2402001AD16C /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		EF31361B243E2402001AD16C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EF31361C243E2402001AD16C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EF31361F243E2402001AD16C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF313622243E2402001AD16C /* BookStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BookStore.xcdatamodel; sourceTree = "<group>"; };
+		EF313624243E2407001AD16C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF313627243E2407001AD16C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF313629243E2407001AD16C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF31362A243E2407001AD16C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF9A8C6D243E25DB009BD243 /* Book.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		EF9A8C6E243E25DB009BD243 /* Book.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
+		EF9A8C75243E2B9C009BD243 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		EF9A8C76243E2B9C009BD243 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		EF9A8C7C243E2EB3009BD243 /* BooksRepo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BooksRepo.h; sourceTree = "<group>"; };
+		EF9A8C7D243E2EB3009BD243 /* BooksRepo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BooksRepo.m; sourceTree = "<group>"; };
+		EF9A8C7F243E2EF6009BD243 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		EF9A8C80243E2EF6009BD243 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		EF9A8C84243E37E0009BD243 /* BookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCell.xib; sourceTree = "<group>"; };
+		EF9A8C86243E3824009BD243 /* BookTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookTableViewCell.h; sourceTree = "<group>"; };
+		EF9A8C87243E3824009BD243 /* BookTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookTableViewCell.m; sourceTree = "<group>"; };
+		EF9A8C89243E38AE009BD243 /* SearchViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewModel.h; sourceTree = "<group>"; };
+		EF9A8C8A243E38AE009BD243 /* SearchViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewModel.m; sourceTree = "<group>"; };
+		EF9A8C8C243E567B009BD243 /* BookViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookViewModel.h; sourceTree = "<group>"; };
+		EF9A8C8D243E567B009BD243 /* BookViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookViewModel.m; sourceTree = "<group>"; };
+		EF9A8C92243E592D009BD243 /* BookViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookViewController.h; sourceTree = "<group>"; };
+		EF9A8C93243E592D009BD243 /* BookViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookViewController.m; sourceTree = "<group>"; };
+		EF9A8C96243E6694009BD243 /* BookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCollectionViewCell.xib; sourceTree = "<group>"; };
+		EF9A8C98243E67C0009BD243 /* BookCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookCollectionViewCell.h; sourceTree = "<group>"; };
+		EF9A8C99243E67C0009BD243 /* BookCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookCollectionViewCell.m; sourceTree = "<group>"; };
+		EF9A8C9B243F2EC7009BD243 /* MainViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewModel.h; sourceTree = "<group>"; };
+		EF9A8C9C243F2EC7009BD243 /* MainViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewModel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF31360F243E2402001AD16C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A2AEC2930AD42EA3E374A59 /* Pods_BookStore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8A30EB6DDA609B2E0EF75320 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B423592B9C3A9262C3572A89 /* Pods-BookStore.debug.xcconfig */,
+				4AAAA1E924ECA36F5CEDBF03 /* Pods-BookStore.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B84FCAC67636218E9D0A468C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B192C7D6CA6F6A82F58F7A8 /* Pods_BookStore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF313609243E2402001AD16C = {
+			isa = PBXGroup;
+			children = (
+				EF313614243E2402001AD16C /* BookStore */,
+				EF313613243E2402001AD16C /* Products */,
+				8A30EB6DDA609B2E0EF75320 /* Pods */,
+				B84FCAC67636218E9D0A468C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EF313613243E2402001AD16C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF313612243E2402001AD16C /* BookStore.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF313614243E2402001AD16C /* BookStore */ = {
+			isa = PBXGroup;
+			children = (
+				EF9A8C82243E37BF009BD243 /* Views */,
+				EF9A8C7B243E2E88009BD243 /* Repositiories */,
+				EF9A8C74243E2ACA009BD243 /* Storyboards */,
+				EF9A8C70243E271C009BD243 /* View Models */,
+				EF9A8C6C243E25C5009BD243 /* Models */,
+				EF9A8C6B243E25BD009BD243 /* View Controllers */,
+				EF313615243E2402001AD16C /* AppDelegate.h */,
+				EF313616243E2402001AD16C /* AppDelegate.m */,
+				EF313618243E2402001AD16C /* SceneDelegate.h */,
+				EF313619243E2402001AD16C /* SceneDelegate.m */,
+				EF31361B243E2402001AD16C /* ViewController.h */,
+				EF31361C243E2402001AD16C /* ViewController.m */,
+				EF313624243E2407001AD16C /* Assets.xcassets */,
+				EF313629243E2407001AD16C /* Info.plist */,
+				EF31362A243E2407001AD16C /* main.m */,
+				EF313621243E2402001AD16C /* BookStore.xcdatamodeld */,
+			);
+			path = BookStore;
+			sourceTree = "<group>";
+		};
+		EF9A8C6B243E25BD009BD243 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EF9A8C75243E2B9C009BD243 /* MainViewController.h */,
+				EF9A8C76243E2B9C009BD243 /* MainViewController.m */,
+				EF9A8C7F243E2EF6009BD243 /* SearchViewController.h */,
+				EF9A8C80243E2EF6009BD243 /* SearchViewController.m */,
+				EF9A8C92243E592D009BD243 /* BookViewController.h */,
+				EF9A8C93243E592D009BD243 /* BookViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		EF9A8C6C243E25C5009BD243 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EF9A8C6D243E25DB009BD243 /* Book.h */,
+				EF9A8C6E243E25DB009BD243 /* Book.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EF9A8C70243E271C009BD243 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				EF9A8C89243E38AE009BD243 /* SearchViewModel.h */,
+				EF9A8C8A243E38AE009BD243 /* SearchViewModel.m */,
+				EF9A8C8C243E567B009BD243 /* BookViewModel.h */,
+				EF9A8C8D243E567B009BD243 /* BookViewModel.m */,
+				EF9A8C9B243F2EC7009BD243 /* MainViewModel.h */,
+				EF9A8C9C243F2EC7009BD243 /* MainViewModel.m */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		EF9A8C74243E2ACA009BD243 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EF31361E243E2402001AD16C /* Main.storyboard */,
+				EF313626243E2407001AD16C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		EF9A8C7B243E2E88009BD243 /* Repositiories */ = {
+			isa = PBXGroup;
+			children = (
+				EF9A8C7C243E2EB3009BD243 /* BooksRepo.h */,
+				EF9A8C7D243E2EB3009BD243 /* BooksRepo.m */,
+			);
+			path = Repositiories;
+			sourceTree = "<group>";
+		};
+		EF9A8C82243E37BF009BD243 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EF9A8C95243E6676009BD243 /* BookCollectionViewCell */,
+				EF9A8C83243E37CC009BD243 /* BookCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EF9A8C83243E37CC009BD243 /* BookCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF9A8C84243E37E0009BD243 /* BookCell.xib */,
+				EF9A8C86243E3824009BD243 /* BookTableViewCell.h */,
+				EF9A8C87243E3824009BD243 /* BookTableViewCell.m */,
+			);
+			path = BookCell;
+			sourceTree = "<group>";
+		};
+		EF9A8C95243E6676009BD243 /* BookCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF9A8C96243E6694009BD243 /* BookCollectionViewCell.xib */,
+				EF9A8C98243E67C0009BD243 /* BookCollectionViewCell.h */,
+				EF9A8C99243E67C0009BD243 /* BookCollectionViewCell.m */,
+			);
+			path = BookCollectionViewCell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF313611243E2402001AD16C /* BookStore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF31362E243E2407001AD16C /* Build configuration list for PBXNativeTarget "BookStore" */;
+			buildPhases = (
+				55E04BB7A70E881A1D775FB0 /* [CP] Check Pods Manifest.lock */,
+				EF31360E243E2402001AD16C /* Sources */,
+				EF31360F243E2402001AD16C /* Frameworks */,
+				EF313610243E2402001AD16C /* Resources */,
+				C63FDE12666807F8769A1C53 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BookStore;
+			productName = BookStore;
+			productReference = EF313612243E2402001AD16C /* BookStore.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF31360A243E2402001AD16C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Pedro Costa";
+				TargetAttributes = {
+					EF313611243E2402001AD16C = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = EF31360D243E2402001AD16C /* Build configuration list for PBXProject "BookStore" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF313609243E2402001AD16C;
+			productRefGroup = EF313613243E2402001AD16C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF313611243E2402001AD16C /* BookStore */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF313610243E2402001AD16C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF9A8C85243E37E0009BD243 /* BookCell.xib in Resources */,
+				EF313628243E2407001AD16C /* LaunchScreen.storyboard in Resources */,
+				EF313625243E2407001AD16C /* Assets.xcassets in Resources */,
+				EF313620243E2402001AD16C /* Main.storyboard in Resources */,
+				EF9A8C97243E6694009BD243 /* BookCollectionViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		55E04BB7A70E881A1D775FB0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BookStore-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C63FDE12666807F8769A1C53 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BookStore/Pods-BookStore-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BookStore/Pods-BookStore-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BookStore/Pods-BookStore-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF31360E243E2402001AD16C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF31362B243E2407001AD16C /* main.m in Sources */,
+				EF9A8C88243E3824009BD243 /* BookTableViewCell.m in Sources */,
+				EF31361D243E2402001AD16C /* ViewController.m in Sources */,
+				EF9A8C9D243F2EC7009BD243 /* MainViewModel.m in Sources */,
+				EF9A8C81243E2EF6009BD243 /* SearchViewController.m in Sources */,
+				EF313617243E2402001AD16C /* AppDelegate.m in Sources */,
+				EF9A8C9A243E67C0009BD243 /* BookCollectionViewCell.m in Sources */,
+				EF9A8C77243E2B9C009BD243 /* MainViewController.m in Sources */,
+				EF9A8C8E243E567C009BD243 /* BookViewModel.m in Sources */,
+				EF313623243E2402001AD16C /* BookStore.xcdatamodeld in Sources */,
+				EF9A8C94243E592D009BD243 /* BookViewController.m in Sources */,
+				EF9A8C7E243E2EB3009BD243 /* BooksRepo.m in Sources */,
+				EF9A8C6F243E25DB009BD243 /* Book.m in Sources */,
+				EF9A8C8B243E38AE009BD243 /* SearchViewModel.m in Sources */,
+				EF31361A243E2402001AD16C /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EF31361E243E2402001AD16C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF31361F243E2402001AD16C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF313626243E2407001AD16C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF313627243E2407001AD16C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF31362C243E2407001AD16C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EF31362D243E2407001AD16C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF31362F243E2407001AD16C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B423592B9C3A9262C3572A89 /* Pods-BookStore.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 52HEN46JT4;
+				INFOPLIST_FILE = BookStore/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = null.BookStore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		EF313630243E2407001AD16C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AAAA1E924ECA36F5CEDBF03 /* Pods-BookStore.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 52HEN46JT4;
+				INFOPLIST_FILE = BookStore/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = null.BookStore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF31360D243E2402001AD16C /* Build configuration list for PBXProject "BookStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF31362C243E2407001AD16C /* Debug */,
+				EF31362D243E2407001AD16C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF31362E243E2407001AD16C /* Build configuration list for PBXNativeTarget "BookStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF31362F243E2407001AD16C /* Debug */,
+				EF313630243E2407001AD16C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EF313621243E2402001AD16C /* BookStore.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EF313622243E2402001AD16C /* BookStore.xcdatamodel */,
+			);
+			currentVersion = EF313622243E2402001AD16C /* BookStore.xcdatamodel */;
+			path = BookStore.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EF31360A243E2402001AD16C /* Project object */;
+}
