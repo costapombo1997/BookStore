@@ -10,4 +10,12 @@
 
 @implementation BookCollectionViewCell
 
+- (void)prepareForReuse{
+    [super prepareForReuse];
+    
+    self.bookCoverImage.image = nil;
+    
+}
+
+
 @end

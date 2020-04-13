@@ -24,7 +24,7 @@
     _viewModel = [MainViewModel new];
     [self.booksCollectionView registerNib:[UINib nibWithNibName:@"BookCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"BookCollectionViewCell"];
     
-    [self update];
+    //[self update];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -44,7 +44,6 @@
         self.booksCollectionView.hidden = YES;
         self.messagesLabel.hidden = NO;
     }
-    
 }
 
 
@@ -65,21 +64,30 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     BookCollectionViewCell *cell = [self.booksCollectionView dequeueReusableCellWithReuseIdentifier:@"BookCollectionViewCell" forIndexPath:indexPath];
-    
     Book *book = _viewModel.books[indexPath.row];
+
     
+    // if image is loaded, everything else is loaded too
+    if(book.coverImage){
+        cell.bookTitleLabel.text = book.name;
+        cell.bookCoverImage.image = book.coverImage;
+        return cell;
+    }
+        
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
         
         [self->_viewModel fetchBookByBookId:book.bookId sucessHandler:^(Book *nbook){
-            cell.bookTitleLabel.text = nbook.name;
+            book.name = cell.bookTitleLabel.text = nbook.name;
             if(nbook.coverImage){
-                            cell.bookCoverImage.image = book.coverImage;
+                cell.bookCoverImage.image = book.coverImage;
             }else{
                             dispatch_async(dispatch_get_main_queue(), ^{
+                                book.coverImageURL = nbook.coverImageURL;
                                 NSData * imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:nbook.coverImageURL]];
                                  nbook.coverImage = [UIImage imageWithData:imageData];
-                                cell.bookCoverImage.image =  nbook.coverImage;
+                                 cell.bookCoverImage.image =  nbook.coverImage;
+                                book.coverImage = nbook.coverImage;
                             });
              }
             
@@ -110,10 +118,7 @@
     
      // <b>still</b> not sure if this is anti-pattern in MVVM :/
      Book *book = _viewModel.books[indexPath.row];
-     NSLog(@"%@", book.bookId);
      [bookViewController setBook:book];
-     
-     //[self.navigationController performSegueWithIdentifier:@"showBookDetailSegue" sender:self];
      
      [self.navigationController pushViewController:bookViewController animated:YES];
 

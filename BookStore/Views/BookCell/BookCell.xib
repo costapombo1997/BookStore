@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookCell" rowHeight="123" id="2pX-Pw-XCD" customClass="BookTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="473" height="123"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookCell" rowHeight="150" id="2pX-Pw-XCD" customClass="BookTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="473" height="150"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2pX-Pw-XCD" id="lr7-gP-JZa">
-                <rect key="frame" x="0.0" y="0.0" width="473" height="123"/>
+                <rect key="frame" x="0.0" y="0.0" width="473" height="150"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="II5-cC-b4g">
-                        <rect key="frame" x="20" y="11" width="100" height="100"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="II5-cC-b4g">
+                        <rect key="frame" x="20" y="12.5" width="100" height="117"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="C45-lh-ywv"/>
-                            <constraint firstAttribute="height" constant="100" id="Pmx-3c-6V8"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="Lfb-zq-nAZ"/>
+                            <constraint firstAttribute="width" constant="100" id="rwN-G6-4PY"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OA-hn-diM">
@@ -32,7 +33,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3M-tE-8pb">
-                        <rect key="frame" x="128" y="51" width="325" height="60"/>
+                        <rect key="frame" x="128" y="51" width="325" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -44,7 +45,7 @@
                 <constraints>
                     <constraint firstItem="II5-cC-b4g" firstAttribute="leading" secondItem="lr7-gP-JZa" secondAttribute="leading" constant="20" id="23V-Hr-Iym"/>
                     <constraint firstItem="8OA-hn-diM" firstAttribute="top" secondItem="lr7-gP-JZa" secondAttribute="top" constant="11" id="5J7-Xm-Ny8"/>
-                    <constraint firstAttribute="bottom" secondItem="b3M-tE-8pb" secondAttribute="bottom" constant="12" id="JB7-Rs-yfT"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="II5-cC-b4g" secondAttribute="bottom" constant="11" id="NeI-3l-Gv0"/>
                     <constraint firstItem="II5-cC-b4g" firstAttribute="top" secondItem="lr7-gP-JZa" secondAttribute="top" constant="11" id="P14-rG-OoR"/>
                     <constraint firstAttribute="trailing" secondItem="8OA-hn-diM" secondAttribute="trailing" constant="20" id="UQl-eK-BGO"/>
                     <constraint firstItem="pwI-Oa-hP5" firstAttribute="top" secondItem="lr7-gP-JZa" secondAttribute="top" constant="43" id="VEd-wm-59q"/>
@@ -61,7 +62,10 @@
                 <outlet property="bookTitleLabel" destination="8OA-hn-diM" id="dXw-5q-Mbc"/>
                 <outlet property="imageLoadingActivityIndicator" destination="pwI-Oa-hP5" id="yaL-je-4sw"/>
             </connections>
-            <point key="canvasLocation" x="71.739130434782609" y="19.754464285714285"/>
+            <point key="canvasLocation" x="71.739130434782609" y="28.794642857142854"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="book" catalog="system" width="128" height="101"/>
+    </resources>
 </document>

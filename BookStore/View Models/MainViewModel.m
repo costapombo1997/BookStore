@@ -33,15 +33,28 @@
 
 
 - (void) update{
-    
-
-        
+            
     NSMutableArray *books = [NSMutableArray new];
-    
-    for (NSString *bookId in [BooksRepo getFavourites]) {
-        Book *book = [Book new];
-        book.bookId = bookId;
-        [books addObject:book];
+    BOOL exists;
+    NSArray *favourites =  [BooksRepo getFavourites];
+    for (NSString *bookId in favourites) {
+        exists = NO;
+                       
+        for (Book *storedBook in self.books) {
+            if([storedBook.bookId isEqualToString:bookId]){
+                [books addObject:storedBook];
+                exists = YES;
+                break;
+            }
+        }
+        
+        if(!exists){
+            Book *book = [Book new];
+            book.bookId = bookId;
+            [books addObject:book];
+        }
+        
+
     }
     self.books = books;
 }

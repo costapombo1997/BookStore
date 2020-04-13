@@ -32,7 +32,6 @@
         self.book.coverImageURL = [[volumeInfo valueForKey:@"imageLinks"] valueForKey:@"thumbnail"];
         self.book.description = [volumeInfo valueForKey:@"description"];
         self.book.buyLink = [[rawBookData valueForKey:@"saleInfo"] valueForKey:@"buyLink"];
-        NSLog(@"%@", self.book.buyLink);
         successHandler(rawBookData);
     } errorHandler:^(NSError *error){
         errorHandler(error);

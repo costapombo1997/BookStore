@@ -11,6 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BookCollectionViewCell : UICollectionViewCell
+@property NSString *bookId;
+
 @property (weak, nonatomic) IBOutlet UIImageView *bookCoverImage;
 @property (weak, nonatomic) IBOutlet UILabel *bookTitleLabel;
 
