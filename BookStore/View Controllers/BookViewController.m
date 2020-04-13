@@ -41,7 +41,60 @@
 
 - (void) update{
     self.bookTitleLabel.text = _viewModel.book.name;
-    self.bookDescriptionLabel.text = _viewModel.book.description ? _viewModel.book.description :  @"*no description provided*";
+    
+
+    NSString *description;
+    if(_viewModel.book.description){
+        description = _viewModel.book.description;
+        /*NSError *err = nil;
+       description = [[[NSAttributedString alloc]
+                                   initWithData: [_viewModel.book.description dataUsingEncoding:NSUTF8StringEncoding]
+                                   options: @{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType }
+                                   documentAttributes: nil
+                                   error: &err] string ];
+         */
+        
+        // get the ones from label
+        NSDictionary *attributes = @{
+            NSForegroundColorAttributeName: self.bookDescriptionLabel.textColor,
+                                  NSFontAttributeName: self.bookDescriptionLabel.font
+                                  };
+        
+        
+        NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:description attributes:attributes];
+        UIFont *boldFont = [UIFont boldSystemFontOfSize:self.bookDescriptionLabel.font.pointSize];
+        
+   
+        
+        NSError *error = NULL;
+        NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"<b>.*</b>"
+                                                                               options:NSRegularExpressionCaseInsensitive
+                                                                                 error:&error];
+        
+        NSArray *matches = [regex matchesInString:description options:0 range:NSMakeRange(0, [description length])];
+        for (NSTextCheckingResult *match in matches) {
+             NSRange matchRange = [match range];
+            [attributedText setAttributes:@{NSFontAttributeName: boldFont} range:matchRange];
+        }
+                
+        [attributedText.mutableString replaceOccurrencesOfString:@"<b>" withString:@"" options:NSCaseInsensitiveSearch range:NSMakeRange(0, [attributedText.mutableString length])];
+        [attributedText.mutableString replaceOccurrencesOfString:@"</b>" withString:@"" options:NSCaseInsensitiveSearch range:NSMakeRange(0, [attributedText.mutableString length])];
+        
+        [attributedText.mutableString replaceOccurrencesOfString:@"<p>" withString:@"\n" options:NSCaseInsensitiveSearch range:NSMakeRange(0, [attributedText.mutableString length])];
+        [attributedText.mutableString replaceOccurrencesOfString:@"</p>" withString:@"" options:NSCaseInsensitiveSearch range:NSMakeRange(0, [attributedText.mutableString length])];
+    
+        
+        self.bookDescriptionLabel.attributedText = attributedText;
+    }else{
+        self.bookDescriptionLabel.text = @"*no description provided*";
+    }
+
+
+
+    
+    
+    
+    
     self.bookPublishedLabel.text = _viewModel.book.publishedDate;
     
     
